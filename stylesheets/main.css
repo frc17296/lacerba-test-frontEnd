@@ -118,6 +118,13 @@ nav ul li {
   padding: 3px 0px;  
 }
 
+nav ul li.clicked {
+ animation-name: scaleOnClick;
+ animation-duration: 0.05s;
+ animation-timing-function: ease-in;
+ animation-fill-mode: forwards;
+}
+
 nav ul li a {
   color: rgb(1, 92, 1);  
   font-size: 1.6rem;
@@ -427,5 +434,16 @@ footer .container {
 
   to {
     opacity: 0;    
+  }
+}
+
+@keyframes scaleOnClick {
+  0% {
+    transform: scale(1);   
+  }
+
+  100% {
+    transform: scale(0.9); 
+    background: rgb(63, 187, 145);
   }
 }

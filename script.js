@@ -4,6 +4,16 @@ var closeButton = document.querySelector('#close');
 var scroller = document.getElementById('scroller');
 var newsletter = document.getElementById('newsletter');
 var stickyNav = document.querySelector('.header');
+var navItems = document.querySelectorAll('li');
+
+navItems.forEach((item) => {
+  item.addEventListener('click', function() {
+    item.classList.toggle('clicked');    
+  });
+  item.addEventListener('mouseout', function() {
+    item.classList.remove('clicked');    
+  });
+});
 
 button.addEventListener('click', function() { 
   alertBox.style.display = "block"
