@@ -2,11 +2,101 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+/*************************** ALERT ***************************/
+
+#alert {
+  display: none;
+  background: #fff;
+  overflow: hidden;
+  height: 500px;
+  width: 100%;
+  border: 3px solid rgb(145, 144, 144);
+  border-radius: 10px;
+  box-shadow: 0 0 8px 6px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  position: fixed;
+  top: 40px;
+  left: 0;  
+  opacity: 0;  
+}
+
+#alert .title {
+  text-align: center;
+  padding: 10px; 
+}
+
+#alert .title hr {
+  width: 200px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 4px 10px 1px rgb(0, 0, 0, .7 );  
+  position: relative;
+}
+
+#alert .close-cnt {
+ position: absolute;
+ top: 5px;
+ right: 5px;
+ padding: 5px;
+}
+
+#alert h1 {
+  color: rgb(1, 92, 1);
+  letter-spacing: 3px;
+}
+
+#alert svg { 
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+#alert .description {
+  padding: 15px;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+#alert .alert-footer {
+  height: 60px;
+  margin-top: 5px;
+  border-radius: 0 0 10px 10px;
+  background: #3a3a3a;
+}
+
+#alert #scroller {
+  cursor: pointer;  
+}
+
+/*************************** HEADER ***************************/
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.header.is-stycky {
+  background: #fff;
+}
+
 .logo {
-  width: 50px;
-  height: 50px;
-  padding: 10px;  
+  width: 60px;
+  height: 60px;  
   margin: 0 auto;
+  padding: 10px;
 }
 
 .logo img {
@@ -14,62 +104,319 @@
 }
 
 nav {
-  background: #f0f0f0;    
+  background: #f0f0f0;  
 }
 
 nav ul {
   margin: 0;
-  padding: 5px;
+  padding: 5px;  
 }
 
-
-nav ul li {
+nav ul li {  
   list-style-type: none; 
-  text-align: center; 
-  padding: 3px 0;
+  text-align: center;   
+  padding: 3px 0px;  
 }
 
 nav ul li a {
-  color: #000;
-  text-decoration: none;
-  text-transform: uppercase;
+  color: rgb(1, 92, 1);  
+  font-size: 1.6rem;
   padding: 10px; 
 }
+
+/*************************** BANNER ***************************/
+
+#hero-banner {    
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/trattore.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-attachment: fixed;
+  height: 500px;
+  position: relative;  
+  margin-top: 142px;
+}
+
+#hero-banner .container {  
+  position: absolute;
+  bottom: 0;
+  left: 0;  
+  color: #fff;
+  text-align: left;
+  font-size: 1.7rem;
+  padding-left: 15px;
+  padding-bottom: 30px;
+}
+
+#btn {  
+  text-transform: uppercase;
+  padding: 10px 30px;
+  background: rgb(63, 187, 145);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/*************************** GALLERY ***************************/
+
 #gallery {
   padding: 20px;
 }
 
 #gallery .container {
+  padding-top: 40px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
-.card {    
-  text-align: center;  
+.card {      
+  text-align: center; 
+  font-weight: bold; 
+  font-size: 1.8rem;
+  line-height: 1.5;
+  padding-top: 35px;
 }
 
 .card img {
+  width: 100%;  
+}
+
+.card .caption {
+  position: relative;  
+  display: flex;
+  justify-content: center;
+}
+
+#news {  
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-align: center;  
+  height: 25px;
+  width: 70px;
+  padding: 5px;
+  position: absolute;
+  top: -22px;  
+  
+}
+
+#news p {
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/*************************** NEWSLETTER ***************************/
+
+#newsletter {
+  margin-top: 100px;
+  height: 250px;
+}
+
+#newsletter .container {
+  background: #f0f0f0;
+  text-align: center;
+  height: 100%;
+  padding: 40px 20px; 
+}
+
+#input {
   width: 100%;
+  height: 50px;
+  padding: 15px 30px 15px 15px; 
+  margin: 20px auto;
+  font-size: 1.6rem;
+  border-color:#cac8c8; 
+  border-style: solid; 
+  border-radius: 3px;  
+}
+
+/*************************** FOOTER ***************************/
+
+footer .container {
+  height: 60px;
+  background: none;
 }
 
 
+@media only screen and (min-width: 450px) {
+ 
+  #alert {   
+    width: 350px;    
+    top: 40px;
+    left: 10%;  
+  }
+}
 
 @media only screen and (min-width: 576px) {
+
+  /*************************** ALERT ***************************/
+
+  #alert {    
+    height: 550px;      
+    top: 40px;
+    left: 20%;  
+  }
+
+  /*************************** GALLERY ***************************/
+
+  .card {  
+    flex: 0 1 50%;
+    padding: 10px;
+    height: 350px;
+  }
+
+  #news {
+    visibility: hidden;
+  }
+
+  /*************************** NEWSLETTER ***************************/
+
+  #newsletter .container {    
+    padding: 60px;      
+  }
+
+  #input {
+    width: 380px; 
+    margin: 5px auto;
+  } 
+  
+  /*************************** FOOTER ***************************/
+
+  footer .container {
+    height: 80px;
+    background: #3a3a3a;
+  }
+  
+}  
+
+@media only screen and (min-width: 768px) {
+
+  /*************************** ALERT ***************************/
+  
+  #alert {     
+    width: 500px;   
+  }
+  
+  #alert .description {
+    padding: 15px 50px;    
+  }
+
+  /*************************** HEADER ***************************/
+
+  .header {    
+    height: 50px;
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+    padding: 0 50px;
+  }
+    
+  .logo {
+    float: left;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  nav {
+    background: none;
+    float: right;
+  }
 
   nav ul li {    
     display: inline-block; 
   }
+    
+  /*************************** BANNER ***************************/
+
+  #hero-banner {
+    margin-top: 50px;
+  }
+
+  #hero-banner .container {
+    max-width: 60%;
+    padding: 50px;
+  }
+
+  /*************************** GALLERY ***************************/
+
+  #gallery {
+    padding: 30px;
+  }
 
   .card {
-    padding: 14px;
-    width: 50%;   
+    padding: 15px;
+		flex: 0 1 33.3333%;
+  }
+  
+}
+
+@media only screen and (min-width: 992px) {
+
+  /*************************** ALERT ***************************/
+
+  #alert {    
+    height: 550px;
+    width: 500px;    
+    top: 40px;
+    left: 30%;  
+  }
+
+  #alert svg:hover {
+    background: #d4d3d3;
+  }
+  
+  #alert #scroller:hover {  
+    text-decoration: underline; 
+  }
+
+  /*************************** NAVBAR ***************************/
+
+  nav ul li {
+    padding: 15px 0;
+  }
+  nav ul li:hover {  
+    background: #f0f0f0;
+  }
+
+  /*************************** BANNER ***************************/
+
+  #btn:hover{
+    background: rgb(22, 126, 91);
+  }
+
+  /*************************** GALLERY ***************************/
+
+  #gallery .card:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .card {
-    width: 33.3333%;
-  }    
+
+/*************************** ANIMATIONS ***************************/
+
+@keyframes fadeFromTop {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;    
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;    
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;       
+  }
+
+  to {
+    opacity: 0;    
+  }
 }

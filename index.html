@@ -5,51 +5,97 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400&display=swap" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <link rel="stylesheet" href="./stylesheets/main.css">
   <link rel="stylesheet" href="./stylesheets/normalize.css">
 </head>
-<body>
-  <header>    
-    <div class="logo">
-      <a href="index.html">
-        <img src="./images/Logo_green.png" alt="logo">
-      </a>
-    </div>
-    <nav>
-     <ul>
-       <li><a href="#"> Politica </a></li>
-       <li><a href="#"> Sport </a></li>
-       <li><a href="#"> Contatti </a></li>
-     </ul>
-    </nav>
+<body>  
+  <header>   
+    <div id="alert">
+      <div class="container">
+        <div class="title">
+          <h1> About us </h1>
+          <div class="close-cnt">
+            <svg id="close" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"/></svg>
+          </div>          
+          <hr>          
+        </div>
+        <div class="description">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dolor ipsum, sagittis nec porta id, tristique eget nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce enim ipsum, tempus vel tellus sed, viverra scelerisque mauris. Morbi vel tristique diam, et fringilla massa. Aenean scelerisque est nec est consequat volutpat. Sed semper scelerisque accumsan. Nam luctus nibh vel ipsum lobortis, interdum eleifend eros ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec vel luctus nunc. </p>
+          <p> Iscriviti alla <em id="scroller">newsletter</em> per ricevere gli aggiornamenti </p>
+        </div>
+        <div class="alert-footer"></div>
+      </div>      
+    </div>   
+
+    <div class='header'>
+      <div class="logo">
+        <a href="index.html">
+          <img src="./images/Logo_green.png" alt="logo">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#"> Politica </a></li>
+          <li><a href="#"> Sport </a></li>
+          <li><a href="#"> Contatti </a></li>
+        </ul>
+      </nav>
+    </div>        
   </header>
   <main>
+    <section id="hero-banner">
+      <div class="container">
+        <div class="title">
+          <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porttitor tellus sit amet lorem tristique rutrum</h1>
+        </div>             
+         <button id="btn"> Read More </button>
+        </a>
+      </div>      
+    </section>    
     <section id="gallery">
       <div class="container">
         <div class='card'>
-          <img src="./images/trattore.jpg" alt="trattore">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque consectetur tellus, ut lobortis leo vehicula non. Fusce vel consectetur nisl.</p>
+          <div class="picture">
+            <img src="./images/trattore.jpg" alt="trattore">
+          </div>
+          <div class='caption'>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque consectetur tellus, ut lobortis leo vehicula non.</p>            
+          </div>          
         </div>
         <div class='card'>
-          <img src="./images/orso.jpg" alt="orso">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque consectetur tellus, ut lobortis leo vehicula non. Fusce vel consectetur nisl.</p>
+          <div class="picture">
+            <img src="./images/orso.jpg" alt="orso">
+          </div>
+          <div class='caption'>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque consectetur tellus, ut lobortis leo vehicula non.  Fusce vel consectetur nisl.</p>
+          </div>
         </div>
         <div class='card'>
-          <img src="./images/pace.jpg" alt="pace">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque consectetur tellus, ut lobortis leo vehicula non. Fusce vel consectetur nisl.</p>
+          <div class="picture">
+            <img src="./images/pace.jpg" alt="pace">
+          </div>
+          <div class='caption'>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque consectetur tellus, ut lobortis leo vehicula non.</p>
+            <div id="news"><p> News </p></div>
+          </div>          
         </div>
       </div>
     </section>
+    <section id="newsletter">
+      <div class="container">
+        <h1> Iscriviti alla nostra newsletter! </h1>
+        <input id="input" type="text" placeholder="Lasciaci la tua mail...">
+      </div>
+    </section>
   </main>
+  <footer>
+    <div class="container"></div>
+  </footer> 
   
-  
-
-  <!-- <script>
-    <button id="btn"> Click me </button>
-    var button = document.getElementById('btn');
-    button.addEventListener('click', function() {
-      alert('hai cliccato un bottone')
-    })
-  </script> -->
+  <script src="./script.js"></script>
 </body>
 </html>
