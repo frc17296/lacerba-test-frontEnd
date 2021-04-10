@@ -4,8 +4,8 @@
 
 a {
   text-decoration: none;
-  text-transform: uppercase;
-  -webkit-tap-highlight-color: transparent;
+  text-transform: uppercase;  
+  -webkit-tap-highlight-color: none;
 }
 
 html {
