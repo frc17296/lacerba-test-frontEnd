@@ -5,7 +5,7 @@
 a {
   text-decoration: none;
   text-transform: uppercase;  
-  -webkit-tap-highlight-color: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
