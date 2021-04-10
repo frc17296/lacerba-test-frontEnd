@@ -5,6 +5,7 @@
 a {
   text-decoration: none;
   text-transform: uppercase;
+  background-color: transparent;
 }
 
 html {
