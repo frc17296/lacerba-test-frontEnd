@@ -1,3 +1,5 @@
+/*************************** GENERAL ***************************/
+
 * {
   box-sizing: border-box;
 }
@@ -142,7 +144,7 @@ nav ul li a {
   background-attachment: fixed;
   height: 500px;
   position: relative;  
-  margin-top: 142px;
+  margin-top: 142px; 
 }
 
 #hero-banner .container {  
@@ -152,7 +154,9 @@ nav ul li a {
   color: #fff;
   text-align: left;
   font-size: 1.1rem;  
-  padding: 30px 15px;
+  padding: 30px 15px; 
+  opacity: 0;
+  animation: fromBottom 1s 0.3s forwards ease-in-out;
 }
 
 #btn {  
@@ -164,6 +168,8 @@ nav ul li a {
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  opacity: 0;
+  animation: fadeFromLeft 1.5s 1.2s forwards ease-in-out;
 }
 
 /*************************** GALLERY ***************************/
@@ -185,7 +191,7 @@ nav ul li a {
   font-weight: bold; 
   font-size: 1.8rem;
   line-height: 1.5;
-  padding-top: 35px;
+  padding-top: 35px;  
 }
 
 .card img {
@@ -263,17 +269,7 @@ footer .container {
 
 @media only screen and (min-width: 576px) {
 
-  /*************************** ALERT ***************************/
-
-  /* #alert {    
-    /* height: 550px;   
-    width: 500px;     
-    margin-top: -275px;
-    margin-left: -250px; */
-    /* top: 50%;
-    left: 50%;  */
-    /* overflow: visible;
-  } */
+  /*************************** BANNER ***************************/
 
   #hero-banner .container {
   font-size: 1.7rem;  
@@ -411,10 +407,9 @@ footer .container {
 
   #gallery .card:hover {
     transform: scale(1.1);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;   
   }
 }
-
 
 /*************************** ANIMATIONS ***************************/
 
@@ -448,5 +443,27 @@ footer .container {
   100% {
     transform: scale(0.9); 
     background: rgb(63, 187, 145);
+  }
+}
+
+@keyframes fadeFromLeft {
+  from {
+    opacity: 0;    
+  }
+
+  to {
+    opacity: 1;    
+  }
+}
+
+@keyframes fromBottom {
+  from {
+    opacity: 0;
+    transform: perspective(250px) translateZ(-200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: perspective(250px) translateZ(0);
   }
 }
