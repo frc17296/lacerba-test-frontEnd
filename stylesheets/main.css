@@ -250,12 +250,14 @@ footer .container {
 }
 
 
-@media only screen and (min-width: 450px) {
+@media only screen and (min-width: 380px) {
  
   #alert {   
-    width: 350px;    
-    top: 40px;
-    left: 10%;  
+    width: 350px; 
+    margin-left: -175px; 
+    margin-top: -250px;  
+    top: 50%;
+    left: 50%;  
   }
 }
 
@@ -263,12 +265,15 @@ footer .container {
 
   /*************************** ALERT ***************************/
 
-  #alert {    
-    height: 550px;      
-    top: 40px;
-    left: 20%;  
-    overflow: visible;
-  }
+  /* #alert {    
+    /* height: 550px;   
+    width: 500px;     
+    margin-top: -275px;
+    margin-left: -250px; */
+    /* top: 50%;
+    left: 50%;  */
+    /* overflow: visible;
+  } */
 
   #hero-banner .container {
   font-size: 1.7rem;  
@@ -314,8 +319,12 @@ footer .container {
 
   /*************************** ALERT ***************************/
   
-  #alert {     
-    width: 500px;   
+  #alert { 
+    overflow: visible;    
+    height: 550px;   
+    width: 500px;     
+    margin-top: -275px;
+    margin-left: -250px; 
   }
   
   #alert .description {
@@ -374,13 +383,6 @@ footer .container {
 @media only screen and (min-width: 992px) {
 
   /*************************** ALERT ***************************/
-
-  #alert {    
-    height: 550px;
-    width: 500px;    
-    top: 40px;
-    left: 30%;  
-  }
 
   #alert svg:hover {
     background: #d4d3d3;
