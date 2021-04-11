@@ -18,6 +18,10 @@ body {
   font-family: 'Fira Sans', sans-serif;
 }
 
+img {
+  width: 100%;
+}
+
 /*************************** ALERT ***************************/
 
 #alert {
@@ -89,6 +93,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 1;
+  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.3);
 }
 
 .header.is-stycky {
@@ -100,10 +105,6 @@ body {
   height: 60px;  
   margin: 0 auto;
   padding: 10px;
-}
-
-.logo img {
-  width: 100%;
 }
 
 nav {
@@ -155,7 +156,8 @@ nav ul li a {
   text-align: left;
   font-size: 1.1rem;  
   padding: 100px 15px; 
-  
+  opacity: 0;
+  animation: fromBottom 1s 0.3s forwards ease-in-out;
 }
 
 #btn {  
@@ -191,10 +193,6 @@ nav ul li a {
   font-size: 1.8rem;
   line-height: 1.5;
   padding-top: 35px;  
-}
-
-.card img {
-  width: 100%;  
 }
 
 .card .caption {
@@ -271,7 +269,7 @@ footer .container {
   /*************************** BANNER ***************************/
 
   #hero-banner .container {
-  font-size: 1.7rem;  
+    font-size: 1.7rem;  
   }
 
   #btn {
@@ -360,8 +358,6 @@ footer .container {
   #hero-banner .container {
     max-width: 60%;
     padding: 50px;
-    opacity: 0;
-    animation: fromBottom 1s 0.3s forwards ease-in-out;
   }
 
   /*************************** GALLERY ***************************/
@@ -437,11 +433,11 @@ footer .container {
 }
 
 @keyframes scaleOnClick {
-  0% {
+  from {
     transform: scale(1);   
   }
 
-  100% {
+  to {
     transform: scale(0.9); 
     background: rgb(63, 187, 145);
   }

@@ -5,6 +5,13 @@ var scroller = document.getElementById('scroller');
 var newsletter = document.getElementById('newsletter');
 var stickyNav = document.querySelector('.header');
 var navItems = document.querySelectorAll('li');
+var mailInput = document.getElementById('input');
+
+mailInput.addEventListener('keydown', function(event) {
+  if (event.key == 'Enter') {
+    this.value = "";    
+  }
+})
 
 navItems.forEach((item) => {
   item.addEventListener('click', function() {
